@@ -1,11 +1,59 @@
 import React from "react";
-import { BrowserRouter, Route, Switch } from "react-router-dom"; // npm i react-router-dom
+import "./sass/main.scss";
 
-const ExpenseDashBoard = () => <div>this is Dashboard component</div>;
-const Create = () => <div>this is create page</div>;
-const Edit = () => <div>this is the Edit page</div>;
-const Help = () => <div>this is the help page</div>;
-const Err404 = () => <div>404 page is not found</div>;
+import { BrowserRouter, Route, Switch, NavLink } from "react-router-dom"; // npm i react-router-dom
+
+const ExpenseDashBoard = () => (
+  <div>
+    <Navigation />
+    <h1>this is Dashboard component</h1>
+  </div>
+);
+
+const Create = () => (
+  <div>
+    <Navigation />
+    <h1>this is Create page</h1>
+  </div>
+);
+
+const Edit = () => (
+  <div>
+    <Navigation />
+    <h1>this is Edit page</h1>
+  </div>
+);
+
+const Help = () => (
+  <div>
+    <Navigation />
+    <h1>this is Help page</h1>
+  </div>
+);
+
+const Err404 = () => (
+  <div>
+    <Navigation />
+    <h1>404 page is not found</h1>
+  </div>
+);
+
+const Navigation = () => (
+  <div>
+    <NavLink to="/" activeClassName="selected" exact>
+      Home
+    </NavLink>
+    <NavLink to="/create" activeClassName="selected" exact>
+      Create
+    </NavLink>
+    <NavLink to="/edit" activeClassName="selected" exact>
+      Edit
+    </NavLink>
+    <NavLink to="/help" activeClassName="selected" exact>
+      Help
+    </NavLink>
+  </div>
+);
 function App() {
   return (
     <BrowserRouter>
