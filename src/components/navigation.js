@@ -8,7 +8,7 @@ const Navigation = () => (
     <NavLink to="/create" activeClassName="selected" exact>
       Create
     </NavLink>
-    <NavLink to="/edit" activeClassName="selected" exact>
+    <NavLink to="/edit/99" activeClassName="selected" exact>
       Edit
     </NavLink>
     <NavLink to="/help" activeClassName="selected" exact>

@@ -11,7 +11,7 @@ function Router() {
       <Switch>
         <Route path="/" component={DashBoard} exact={true} />
         <Route path="/create" component={Create} exact={true} />
-        <Route path="/edit" component={Edit} exact={true} />
+        <Route path="/edit/:id" component={Edit} exact={true} />
         <Route path="/help" component={Help} exact={true} />
         <Route component={Err404} />
       </Switch>
